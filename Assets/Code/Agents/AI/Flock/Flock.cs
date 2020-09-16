@@ -20,6 +20,8 @@ public class Flock : MonoBehaviour
     float squareMaxSpeed;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
+
+
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
     private void Start()
     {
@@ -48,11 +50,11 @@ public class Flock : MonoBehaviour
     {
         foreach (FlockAgent agent in agents)
         {
-            List<Transform> context = GetNearbyObjects(agent);
+            List<Transform> nearbyAgents = GetNearbyObjects(agent);
             //FOR TESTING
-            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
+            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, nearbyAgents.Count / 6f);
 
-            Vector2 move = behavior.CalculateMove(agent, context, this);
+            Vector2 move = behavior.CalculateMove(agent, nearbyAgents, this);
             move *= driveFactor;
             if (move.sqrMagnitude > squareMaxSpeed)
             {

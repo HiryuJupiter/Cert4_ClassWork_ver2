@@ -25,7 +25,6 @@ public class CompositeBehavior : FlockBehavior
             //Gets the calculate move method of each behavior attached
             Vector2 partialMove = behaviors[i].behaviors.CalculateMove(agent, context, flock) * behaviors[i].weights;
 
-
             if (partialMove != Vector2.zero)
             {
                 //If the speed is greater than the weight, then normalize it

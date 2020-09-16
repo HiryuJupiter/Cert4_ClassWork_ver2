@@ -4,31 +4,26 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class FlockAgent : MonoBehaviour
 {
-    Flock agentFlock;
+    Flock flock;
     Collider2D agentCollider;
 
     //Property
-    public Flock AgentFlock { get{ return agentFlock;}}
+    public Flock AgentFlock { get{ return flock;}}
     public Collider2D Collider { get { return agentCollider; } }
 
-    void Start()
+    void Awake()
     {
         agentCollider = GetComponent<Collider2D>();
     }
 
     public void Initialize (Flock flock)
     {
-        agentFlock = flock;
+        this.flock = flock;
     }
 
     public void Move (Vector2 velocity)
     {
         transform.up = velocity;
         transform.position += (Vector3)velocity * Time.deltaTime;
-    }
-    
-    void Update()
-    {
-
     }
 }
