@@ -3407,7 +3407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788466322}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c748c6e11d97414ba4c11d31233af0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 100c366cbac797a48b45e2b8ae329391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
@@ -3456,14 +3456,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788466322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dfc575ba7812ee41b438df6788cbe2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 62b100a474be9324c9690e8e740d747f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1788466326}
   cam: {fileID: 971426509}
   moveSpeed: 6
-  gravity: -100
-  jumpHeight: 1
+  gravity: -9.81
+  jumpHeight: 0
   playerVelocity: {x: 0, y: 0, z: 0}
   turnSmoothTime: 0.1
 --- !u!1 &1830195379

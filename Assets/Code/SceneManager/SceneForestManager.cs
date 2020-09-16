@@ -15,7 +15,7 @@ public class SceneForestManager : Singleton<SceneForestManager>
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
     }
 
