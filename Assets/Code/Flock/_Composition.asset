@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: _Composition
   m_EditorClassIdentifier: 
   behaviors:
-  - behavior: {fileID: 11400000, guid: 5658031fea226eb4e9d101605e773b1c, type: 2}
-    weights: 1
-  - behavior: {fileID: 11400000, guid: 5b1954a7394121c4baf205cc0ddab829, type: 2}
-    weights: 2
-  - behavior: {fileID: 11400000, guid: 2d8cc5585f499cf4b90b129c8d384b63, type: 2}
-    weights: 1
-  - behavior: {fileID: 11400000, guid: 92140e77abd87aa4d983677218ebe200, type: 2}
-    weights: 0.1
+  - {fileID: 11400000, guid: 5658031fea226eb4e9d101605e773b1c, type: 2}
+  - {fileID: 11400000, guid: 5b1954a7394121c4baf205cc0ddab829, type: 2}
+  - {fileID: 11400000, guid: 2d8cc5585f499cf4b90b129c8d384b63, type: 2}
+  - {fileID: 11400000, guid: 92140e77abd87aa4d983677218ebe200, type: 2}
+  weights:
+  - 1
+  - 1
+  - 1
+  - 1
