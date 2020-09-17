@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1635ac7fc71af4a8e2b49a4e987cc7, type: 3}
-  m_Name: FlockAlignment
+  m_Script: {fileID: 11500000, guid: 9371de081be8c5e4ba6048856d0b79ae, type: 3}
+  m_Name: StayInRadius
   m_EditorClassIdentifier: 
+  center: {x: 0, y: 0}
+  maxDistance: 15

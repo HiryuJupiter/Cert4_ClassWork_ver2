@@ -34,6 +34,10 @@ public class Flock : MonoBehaviour
         squaredNeighborRadius = neighborRadius * neighborRadius;
         SquaredAvoidanceRadius = squaredNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
 
+        Debug.Log("squaredMaxSpeed: " + squaredMaxSpeed);
+        Debug.Log("squaredNeighborRadius: " + squaredNeighborRadius);
+        Debug.Log("SquaredAvoidanceRadius: " + SquaredAvoidanceRadius);
+
         //Spawn agents
         for (int i = 0; i < startingCount; i++)
         {
@@ -46,8 +50,6 @@ public class Flock : MonoBehaviour
             newAgent.name = "Agent " + i;
             newAgent.Initialize(this);
             agents.Add(newAgent);
-
-            newAgent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, Random.Range(0f, 1f));
         }
     }
     void Update()
@@ -55,6 +57,8 @@ public class Flock : MonoBehaviour
         foreach (FlockAgent agent in agents)
         {
             List<Transform> nearbyAgents = GetNearbyObjects(agent);
+
+            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, nearbyAgents.Count / 6f);
 
             Vector2 move = behavior.CalculateMove(agent, nearbyAgents, this);
             move *= driveFactor;
