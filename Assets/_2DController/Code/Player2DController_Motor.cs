@@ -6,18 +6,18 @@ using UnityEngine.Events;
 public class Player2DController_Motor : MonoBehaviour
 {
 	[Header("Move Speed")]
-	[SerializeField] float moveSpeed = 50f;
+	[SerializeField] float moveSpeed = 15f;
 	//[Range(0, 1)]	[SerializeField] float crouchMoveSpeed = .36f;
-	[Range(5f, 50f)] [SerializeField] float steeringOnGround = 10f;
-	[Range(5f, 50f)] [SerializeField] float steeringInAir = 5f;
+	[Range(5f, 50f)] [SerializeField] float steeringOnGround = 50f;
+	[Range(5f, 50f)] [SerializeField] float steeringInAir = 15f;
 
 	[Header("Jumping")]
-	[SerializeField] float jumpForce = 40f;
+	[SerializeField] float jumpForce = 25f;
 	
 	[SerializeField] LayerMask groundLayer;
 
 	[Header("Gravity")]
-	[SerializeField] float gravity = 4f;
+	[SerializeField] float gravity = 100f;
 
 	float coyoteAllowance = 0.2f;
 	float jumpQueueAllowance = 0.2f;
