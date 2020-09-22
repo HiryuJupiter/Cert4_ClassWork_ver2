@@ -34,7 +34,7 @@ public class MainMenuManager : MonoBehaviour
     {
         gm.loadeSaveFile = true;
         gm.GameData.LoadGameData();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(gm.GameData.gameLevelIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(gm.GameData.playerStats.sceneIndex);
     }
 
     public void Clicked_Quit()

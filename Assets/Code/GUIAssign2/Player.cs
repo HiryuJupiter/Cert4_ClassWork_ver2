@@ -1,9 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Security.Policy;
+using System;
 
-public class PlayerController3D : MonoBehaviour
+
+public class Player : MonoBehaviour
 {
+    [SerializeField] public PlayerStats playerStats;
+    public QuarterHeartUI healthUI;
+    public int testHealth = 100;
+
+    void Awake()
+    {
+        healthUI.Initialize(playerStats.maxHealth);
+    }
+
+    void Update()
+    {
+        SetHealth(testHealth);
+    }
+
+    void DealDamage(int damage)
+    {
+        SetHealth(playerStats.currentHealth - damage);
+    }
+
+    public void SetHealth (int currentHealth)
+    {
+        playerStats.currentHealth = currentHealth;
+        healthUI.HealthChanged(currentHealth); //ui
+    }
+}
+
+/*
     public static PlayerController3D instance;
 
     [Header("Stats")]
@@ -107,4 +135,4 @@ public class PlayerController3D : MonoBehaviour
         SceneEvents.GameLoad.OnEvent += Load;
     }
     #endregion
-}
+ */
